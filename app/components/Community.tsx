@@ -8,7 +8,7 @@ export default function Community() {
           <input type="button" value="Join" className="h-8 px-5 bg-[#8214d1] cursor-pointer hover:bg-[#950ef5] text-white ml-2 rounded-md shadow-md" />
         </div>
         <svg fill="#15485850" className="z-1 h-[230px] z-0 absolute w-full bottom-0 left-0" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  aria-hidden="true"><path d="M0 100s969.9-9.9 1000-40v40H0z"></path><path d="M0 100S909.5 90.5 1000 0v100H0z" opacity=".5"></path><path d="M0 100s940-10 1000-70v70H0z" opacity=".3"></path></svg>
-     
+      
       </div>
     )
   }
