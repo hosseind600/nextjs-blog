@@ -6,3 +6,26 @@ html {
 	scrollbar-color: rgb(54, 54, 54) rgb(0, 0, 0);
     scrollbar-width: 10px;
 }
+.bgsvg{
+    rotate: 180deg;
+}
+
+.lead {
+	background: linear-gradient(90deg,#fff702 0%, #9812f8 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+    z-index: 100;
+}
+.postimg{
+    border-bottom: 5px #8214d1 solid;
+}
+.cr{
+    position: relative;
+    cursor: pointer;
+    background-color: #8214d1;
+
+}
+.cr:hover{
+    background-color: #a03ae9;
+
+}
