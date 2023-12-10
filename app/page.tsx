@@ -6,7 +6,7 @@ import Footer from "./components/Footer"
 export default function Home() {
   return (
     <div>
-      <MainHeader/>
+      <MainHeader activeTab="home"/>
       <MainSlider/>
       <LatestBlogs/>
       <Community/>

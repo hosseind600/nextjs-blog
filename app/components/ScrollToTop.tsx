@@ -25,7 +25,9 @@ export default function ScrollToTop() {
       </div>
     ) 
   } else {
-      return (<div></div>)
+      return (<div>
+        {/* scroll to top */}
+      </div>)
   }
 }
   
