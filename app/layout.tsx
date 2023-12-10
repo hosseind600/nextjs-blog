@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-
+import ScrollToTop from './components/ScrollToTop';
 export const getServerSideProps = () => {};
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="tbody">{children}</body>
+      <body className="tbody">{children}
+      <ScrollToTop /></body>
     </html>
   )
 }
