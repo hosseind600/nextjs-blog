@@ -14,7 +14,7 @@ html {
 	background: linear-gradient(90deg,#fff702 0%, #9812f8 100%);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-    z-index: 100;
+ 
 }
 .postimg{
     border-bottom: 5px #8214d1 solid;
