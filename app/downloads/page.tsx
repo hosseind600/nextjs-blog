@@ -12,7 +12,7 @@ async function getData() {
  
 } 
 
-export default async function Posts({params,searchParams}) {
+export default async function Posts() {
   const downloads = await getData()
 
   return ( 
@@ -22,7 +22,7 @@ export default async function Posts({params,searchParams}) {
         <svg fill="#0c111770" className="bgsvg h-[230px] z-0 absolute w-full top-0 left-0" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  aria-hidden="true"><path d="M0 100s969.9-9.9 1000-40v40H0z"></path><path d="M0 100S909.5 90.5 1000 0v100H0z" opacity=".5"></path><path d="M0 100s940-10 1000-70v70H0z" opacity=".3"></path></svg>
           <h2 className="text-center mt-20 relative text-white z-10 text-[40px] font-bold uppercase">Downloads</h2>
           <span className="uppercase relative lead z-10 text-sm font-bold text-center mb-10 block">Free Web and Game development assets</span>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-col gap-10 md:flex-row ">
             <div className="relative sidebar min-w-[220px] flex flex-col gap-5">
               <div className="rounded-md bg-gray-600/50 p-4">
                   <input className="bg-gray-500 outline-none focus:bg-gray-600 text-white h-[40px] rounded-md px-3 w-full text-sm border-0" type="text" name="searchInp" placeholder="Search Assets ..." />
@@ -36,7 +36,7 @@ export default async function Posts({params,searchParams}) {
                 </ul>
               </div>
             </div>
-            <div className="relative dcontent grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+            <div className="relative dcontent grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-5">
               {downloads.map((item,index)=>{
                 return (<div className="bg-gray-900 rounded-md shadow-md overflow-hidden">
                 <img className="h-[150px] object-cover w-full border-b-4 border-[#8214d1]" src={item.thumbnail} alt={item.title} />
