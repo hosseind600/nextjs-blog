@@ -1,63 +1,16 @@
-const blogPosts = [
-  {
-    id:1,
-    title:"131 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:2,
-    title:"132 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:3,
-    title:"133 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:4,
-    title:"134 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:5,
-    title:"135 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:6,
-    title:"136 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:7,
-    title:"137 Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-  {
-    id:8,
-    title:"138Godot Engine Tricks You’ll WISH You Knew Sooner",
-    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
-    date:'May 11, 2023',
-    thumbnail:"slides/p1.jpg"
-  },
-]
+async function getData() {
 
-export default function LatestBlogs() {
+  let data = await fetch(process.env.SITE_URL +"/api/blog_posts?p=1");
+ 
+  if (data.ok) { 
+    let json = await data.json();
+    return json.data;
+  } 
+ 
+} 
+export default async function LatestBlogs() {
+  const blogPosts = await getData()
+
     return (
       <div className="px-2  lg:px-20 md:px-10 sm:px-5 bg-gray-800 py-16 relative">
           <svg fill="#0c111770" className="bgsvg h-[230px] z-0 absolute w-full top-0 left-0" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  aria-hidden="true"><path d="M0 100s969.9-9.9 1000-40v40H0z"></path><path d="M0 100S909.5 90.5 1000 0v100H0z" opacity=".5"></path><path d="M0 100s940-10 1000-70v70H0z" opacity=".3"></path></svg>

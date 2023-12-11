@@ -1,7 +1,6 @@
+async function getData(pageNumber) {
 
-async function getData(p) {
-
-  let data = await fetch("http://localhost:3000/api/blog_posts?p="+parseInt(p));
+  let data = await fetch(process.env.SITE_URL +"/api/blog_posts?p="+parseInt(pageNumber));
  
   if (data.ok) { 
     let json = await data.json();
