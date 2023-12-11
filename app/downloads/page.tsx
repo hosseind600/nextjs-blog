@@ -5,8 +5,8 @@ import Footer from "../components/Footer"
 export default function Posts({params,searchParams}) {
   return (
     <div>
-      <MainHeader activeTab="articles"/>
-      <BlogPosts page={searchParams.p??1}/>
+      <MainHeader activeTab="downloads"/>
+      <div>downloads</div>
       <Community/>
       <Footer/>
     </div>
