@@ -1,6 +1,12 @@
 import MainHeader from "../../components/MainHeader"
 import Community from "../../components/Community"
 import Footer from "../../components/Footer"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Next Personal Website Demo - Single Post',
+  description: 'This demo is generated to show a demonstration on Nextjs .',
+}
 export default function SinglePost() {
   return (
     <div>

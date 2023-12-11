@@ -1,6 +1,13 @@
 import MainHeader from "../components/MainHeader"
 import Community from "../components/Community"
 import Footer from "../components/Footer"
+import type { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'Next Personal Website Demo - Downloads',
+  description: 'This demo is generated to show a demonstration on Nextjs .',
+}
 async function getData() {
 
   let data = await fetch(process.env.SITE_URL +"/api/downloads?no_cache");

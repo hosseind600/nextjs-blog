@@ -22,7 +22,7 @@ export default async function LatestBlogs() {
               return ( <div className="bg-gray-700 rounded-lg shadow-md relative overflow-hidden pb-3">
               <img src={item.thumbnail} alt={item.title} className="aspect-sqaure postimg mb-3 object-cover  w-full" />
               <span className="uppercase text-gray-300 ml-3 mb-3">{item.date}</span>
-              <h1 className="text-white ml-3 mb-3 font-bold text-lg mr-3">{item.title}</h1>
+              <h2 className="text-white ml-3 mb-3 font-bold text-lg mr-3">{item.title}</h2>
               <p className="text-gray-200 ml-3 mb-3 text-sm text-justify mr-3">{item.description}</p>
               <a href={'/posts/'+item.id} className="bg-gray-800 rounded-full py-1 px-4 text-sm text-white mt-3 ml-3 cr">Continue Reading...</a>
             </div>)
