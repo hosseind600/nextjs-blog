@@ -20,11 +20,11 @@ export default async function LatestBlogs() {
             
             {blogPosts.map(function(item,index){
               return ( <div className="bg-gray-700 rounded-lg shadow-md relative overflow-hidden pb-3">
-              <img src={item.thumbnail} alt={item.title} className="aspect-sqaure postimg mb-3 object-cover  w-full" />
+              <a href={'/posts/'+item.id}  title={item.title}><img src={item.thumbnail} alt={item.title} className="aspect-sqaure postimg mb-3 object-cover  w-full" /></a>
               <span className="uppercase text-gray-300 ml-3 mb-3">{item.date}</span>
-              <h2 className="text-white ml-3 mb-3 font-bold text-lg mr-3">{item.title}</h2>
+              <a href={'/posts/'+item.id} title={item.title}><h2 className="text-white ml-3 mb-3 font-bold text-lg mr-3">{item.title}</h2></a>
               <p className="text-gray-200 ml-3 mb-3 text-sm text-justify mr-3">{item.description}</p>
-              <a href={'/posts/'+item.id} className="bg-gray-800 rounded-full py-1 px-4 text-sm text-white mt-3 ml-3 cr">Continue Reading...</a>
+              <a href={'/posts/'+item.id} title={"Read more about "+item.title} className="bg-gray-800 rounded-full py-1 px-4 text-sm text-white mt-3 ml-3 cr">Continue Reading...</a>
             </div>)
             })}
 

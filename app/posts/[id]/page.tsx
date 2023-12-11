@@ -3,9 +3,20 @@ import Community from "../../components/Community"
 import Footer from "../../components/Footer"
 import type { Metadata } from 'next'
 
+
+function get_post_data(){
+  return {
+    id:1,
+    title:"1231 Godot Engine Tricks You’ll WISH You Knew Sooner",
+    description:"When working as a game developer, every tip and trick to save yourself time and make your life easier counts. And I briefly scoured the internets to find some great Godot Engine tricks and bundled them up in a nice quick video for you, so you don’t have to. Here are 12 Godot Engine tricks",
+    date:'May 11, 2023',
+    thumbnail:"slides/p1.jpg"
+  }
+}
+
 export const metadata: Metadata = {
-  title: 'Next Personal Website Demo - Single Post',
-  description: 'This demo is generated to show a demonstration on Nextjs .',
+  title: 'Next Personal Website Demo - '+ get_post_data().title,
+  description: get_post_data().description,
 }
 export default function SinglePost() {
   return (
