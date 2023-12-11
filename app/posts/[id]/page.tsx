@@ -22,11 +22,11 @@ export default function SinglePost() {
   return (
     <div>
       <MainHeader activeTab="articles"/>
-      <div className="relative">
-        <img src="/slides/p4.jpg" alt="post1" className="mt-[80px] w-full h-[500px] object-cover"/>
-        <div className="absolute left-8 bottom-8">
+      <div className="relative flex flex-col h-[400px] lg:h-[500px] justify-end">
+        <img src="/slides/p4.jpg" alt="post1" className="absolute w-full h-[500px] object-cover"/>
+        <div className="p-10 relative z-10 ">
             <span className="bg-[#b145ff] h-7 left-7 text-white px-4 sps">GameDev</span>
-            <h1 className="text-white text-[70px] font-extrabold spt">13 Godot Engine Tricks You’ll WISH You Knew Sooner</h1>
+            <h1 className="text-white text-[30px] mb-3 md:text-[40px] lg:text-[70px] font-extrabold spt">13 Godot Engine Tricks You’ll WISH You Knew Sooner</h1>
         
             <div className="flex flex-row items-center">
                 <a href="#"><img src="/bhdlogo.png" className="h-[50px] aspect-square mr-3" /></a>
@@ -37,8 +37,8 @@ export default function SinglePost() {
             </div>
         </div>
       </div>
-      <div className="px-2  lg:px-20 md:px-10 sm:px-5 bg-gray-800 py-[80px] relative">
-        <div className="posttext text-white leading-7">
+      <div className="px-10 lg:px-20  sm:px-5 bg-gray-800 py-[30px] relative">
+        <div className="posttext text-white leading-7 ">
             The world of game development is ever-evolving, and with the upcoming release of Godot 4.0, game developers will have even more tools at their disposal to create immersive gaming experiences. One of the most exciting new features in Godot 4.0 is the addition of sky shaders, which allow developers to upgrade their sky backgrounds and have more dynamic control over their sky material.
 
             In this article, we will explore the benefits of using sky shaders in Godot 4.0, how to set up a sky shader, and the various built-in resources available for creating dynamic, procedural skies.

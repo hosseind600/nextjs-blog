@@ -25,7 +25,7 @@ export default async function Posts() {
   return ( 
     <div>
       <MainHeader activeTab="downloads"/>
-      <div className="px-2  lg:px-20 md:px-10 sm:px-5 bg-gray-800 py-16 relative pt-[80px]" >
+      <div className="px-10  lg:px-20 bg-gray-800 py-10 md:py-16 relative pt-[40px] md:pt-[80px]" >
         <svg fill="#0c111770" className="bgsvg h-[230px] z-0 absolute w-full top-0 left-0" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  aria-hidden="true"><path d="M0 100s969.9-9.9 1000-40v40H0z"></path><path d="M0 100S909.5 90.5 1000 0v100H0z" opacity=".5"></path><path d="M0 100s940-10 1000-70v70H0z" opacity=".3"></path></svg>
           <h2 className="text-center mt-20 relative text-white z-10 text-[40px] font-bold uppercase">Downloads</h2>
           <span className="uppercase relative lead z-10 text-sm font-bold text-center mb-10 block">Free Web and Game development assets</span>
@@ -46,7 +46,7 @@ export default async function Posts() {
             <div className="relative dcontent grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-5">
               {downloads.map((item,index)=>{
                 return (<div className="bg-gray-900 rounded-md shadow-md overflow-hidden">
-                <img className="h-[150px] object-cover w-full border-b-4 border-[#8214d1]" src={item.thumbnail} alt={item.title} />
+                <img className=" object-cover w-full aspect-square border-b-4 border-[#8214d1]" src={item.thumbnail} alt={item.title} />
                 <h3 className="p-3 text-white font-bold">{item.title}</h3>
                 <span className="text-[#777] pl-3 pb-3 block">{item.price}</span>
               </div>)
