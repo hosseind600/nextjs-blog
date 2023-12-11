@@ -1,6 +1,6 @@
 export default function Community() {
     return (
-      <div className="p-20 community relative">
+      <div className="p-20 community relative" id="community">
         <h3 className="text-[50px] relative text-white z-20 text-center font-bold mb-3">Join the Community</h3>
         <p className="text-center relative  py-3 px-10 z-20">join the community of developers to recieve daily articles and freemiume downloadables at your inbox.</p>
         <div className="flex flex-row relative items-center justify-center m-3 z-20">
