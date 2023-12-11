@@ -5,7 +5,7 @@ export default function MainHeader({activeTab}) {
         <img className="h-[60px] my-3 aspect-square mr-10" src="/hdlogo.svg"/>
         <ul className="flex  flex-row list-none gap-8 text-md font-bold">
           <li className={activeTab=="home" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="/">Home</a></li>
-          <li  className={activeTab=="downloads" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="#">Downloads</a></li>
+          <li  className={activeTab=="downloads" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="/downloads/">Downloads</a></li>
           <li  className={activeTab=="articles" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="/posts/">Articles</a></li>
           <li  className={activeTab=="about" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="#">About</a></li>
           <li  className={activeTab=="contact" ? 'text-yellow-500 border-b-[3px] border-y-0 border-yellow-300 py-7' :  'py-7'}><a href="#">Contact</a></li>
